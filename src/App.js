@@ -10,14 +10,14 @@ import All from "./component/all/all";
 import MyChart from "./component/cha/cha";
 import None from "./component/none/none";
 import Arm from "./component/arm/armChart";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Test from "./component/test/test";
 import MyChartTwo from "./component/cha/another";
 import Acto from "./component/arm/anto";
 
 function App() {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <div className="d-flex" id="wrapper">
                 <Sidebar/>
                 <div id="page-content-wrapper">
